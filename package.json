@@ -2,13 +2,13 @@
   "name": "grunt-workflows",
   "version": "1.0.0",
   "description": "A workflow demo using Grunt.js",
-  
   "author": "Suresh Swamy",
   "license": "MIT",
   "devDependencies": {
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "node-sass": "^4.9.2"
   }
 }
