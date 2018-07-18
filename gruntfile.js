@@ -6,14 +6,29 @@ module.exports = function(grunt) {
         src: ['components/scripts/*.js'],
         dest: 'builds/development/js/script.js'
       }
-    }
+    },//concat
+    sass: {
+	      dist: {
+          options: {
+          	style: 'expanded',
+          	sourcemap: 'none',
+          	noCache: true
+          },
+	        files: [{
+	        	src: 'components/sass/style.scss',
+	        	dest: 'builds/development/css/styles.css',
+	        	
+	      	}]
+	      }
+	    } //sass
 
 
   }); //initConfig
 
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
 
-  grunt.registerTask('default', ['concat']);
+  grunt.registerTask('default', ['concat', 'sass']);
 
-}; //wrapper function
+}; //grunt wrapper function
